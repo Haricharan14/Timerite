@@ -1,0 +1,236 @@
+/* Body styling */
+body {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Cascadia Code', monospace;
+    color: #ffffff00;
+    background-color: #c6d0da;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+}
+
+
+
+/* Top bar styling */
+.top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+/* Logo Styling */
+.logo {
+    height: 40px; /* Adjust logo size */
+    cursor: pointer;
+    font-weight: 700;
+    margin-top: -4px
+}
+
+.logo:before {
+    content: 'timerite'; /* Fallback text if image doesn't load */
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    display: block;
+    line-height: 40px;
+}
+
+/* About Link Styling */
+.about {
+    font-size: 1.2em;
+    color: rgb(188, 188, 188);
+    text-decoration: none;
+    text-align: right; /* Ensures text aligns properly */
+    margin-right: 40px; /* Adds spacing to ensure visibility */
+
+}
+
+/* Main container styling */
+.container {
+    background: rgba(255, 255, 255, 0.237);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 25px;
+    overflow: hidden;
+    max-width: 750px;
+    width: 90%;
+    margin: 80px auto 60px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 1;
+    transform: scale(1);
+}
+
+/* Heading styling */
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.326);
+    color: #000000;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid rgb(237, 237, 237);
+}
+
+/* Countdown section styling */
+.countdown-section {
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 1.4em;
+    color: #000000;
+    text-align: left;
+    font-family: 'Cascadia Code', monospace;
+}
+
+.countdown-section:last-child {
+    border-bottom: none;
+}
+
+.countdown-section:hover {
+    background: rgb(255, 255, 255);
+}
+.copyright {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: #ffffff;
+    font-size: 14px;
+}
+/* Deadline info styling */
+.deadline-info {
+    color: #000000;
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+/* Timer styling */
+.timer {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #000000;
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(0, 171, 11, 0.2);
+    border-radius: 5px;
+}
+
+.timer.passed {
+    color: #ff0000;
+    background: rgba(255, 0, 0, 0.1);
+}
+
+/* Week section styling */
+.countdown-section h2 {
+    color: #000000;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+.info-box {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.info-box ul {
+    margin: 10px 0;
+    padding-left: 20px;
+    color: #000000;
+}
+
+.info-box p {
+    margin: 10px 0;
+    color: #000000;
+}
+
+.info-box strong {
+    color: #000000;
+}
+.formula {
+    padding: 15px 0;
+    text-align: center;
+    overflow-x: auto;
+}
+
+.info-box small {
+    color: #000000;
+    font-style: italic;
+}
+
+
+.deadline-passed {
+    background-color: rgba(255, 0, 0, 0.2); /* Light red background */
+    color: red; /* Text color */
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px; /* Space above the deadline text */
+    text-align: center; /* Center the text */
+}
+.floating-countdown {
+    position: fixed; /* Keep it fixed */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center alignment */
+    font-size: 35em; /* Large font size */
+    color: rgba(255, 255, 255, 0.361); /* Semi-transparent blue color */
+    text-align: center;
+    z-index: 1; /* Ensure it is above other content */
+    pointer-events: none; /* Allow clicks to pass through */
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    font-weight: bold; /* Bold text */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+
+.floating-countdown span {
+    display: inline; /* Keep spans inline */
+    margin: 0 5px; /* Add some space between elements */
+}
+.container {
+    position: relative; /* Ensure the container is positioned relative */
+    z-index: 2; /* Ensure it is above the countdown */
+}
+/* Mobile view adjustments for the floating countdown */
+@media (max-width: 768px) {
+    .container {
+        background: rgba(224, 221, 194, 0.168);
+        margin: 60px auto 80px;
+        transform: scale(0.85);
+        width: 85%;
+        max-width: 600px;
+    }
+
+    body {
+        padding: 10px;
+    }
+
+    .countdown-section {
+        font-size: 1.2em;
+        padding: 15px;
+    }
+
+    .floating-countdown {
+        font-size: 20em;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -70%);
+        color: rgba(255, 255, 255, 0.505);
+        white-space: nowrap;
+    }
+    .top-bar {
+        background-color: #c6d0da81;
+        backdrop-filter: blur(150px)
+    }
+}

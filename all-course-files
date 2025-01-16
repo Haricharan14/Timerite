@@ -1,0 +1,113 @@
+<script>
+async function loadCourseData() {
+    try {
+        const response = await fetch('courses-data.json');
+        const data = await response.json();
+        const courseData = data['[Course Name]']; // Replace with actual course name
+        
+        // Update major assessments
+        updateMajorAssessments(courseData.majorAssessments);
+        
+        // Update assignments (weekly or course-specific)
+        if (courseData.weeklyAssignments) {
+            updateWeeklyAssignments(courseData.weeklyAssignments);
+        } else if (courseData.assignments) {
+            updateCourseAssignments(courseData.assignments);
+        }
+        
+        // Update grading information
+        updateGradingInfo(courseData.grading);
+        
+        // Initialize timers
+        initializeTimers(courseData);
+    } catch (error) {
+        console.error('Error loading course data:', error);
+    }
+}
+
+// Add the helper functions
+function updateMajorAssessments(assessments) {
+    const container = document.querySelector('.countdown-section');
+    const assessmentHTML = Object.entries(assessments)
+        .map(([key, assessment]) => `
+            <div class="deadline-info">${assessment.name}: ${assessment.description}</div>
+            <div id="${key}-timer" class="timer"></div>
+        `).join('');
+    
+    container.querySelector('h2').insertAdjacentHTML('afterend', assessmentHTML);
+}
+
+function updateWeeklyAssignments(assignments) {
+    const container = document.querySelector('.countdown-section');
+    const weeklyHTML = assignments
+        .map(assignment => `
+            <div class="deadline-info">Week ${assignment.week}: ${assignment.description}</div>
+            <div id="week${assignment.week}-timer" class="timer"></div>
+        `).join('');
+    
+    const weeklySection = container.querySelector('h2:contains("Weekly Assignments")');
+    weeklySection.insertAdjacentHTML('afterend', weeklyHTML);
+}
+
+function updateCourseAssignments(assignments) {
+    const container = document.querySelector('.countdown-section');
+    const assignmentHTML = assignments
+        .map(assignment => `
+            <div class="deadline-info">${assignment.name} (${assignment.marks} marks)</div>
+            <div>Release: ${new Date(assignment.release).toLocaleDateString('en-US', { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            })}</div>
+            <div id="${assignment.name.toLowerCase().replace(' ', '')}-timer" class="timer"></div>
+        `).join('');
+    
+    container.querySelector('h2').insertAdjacentHTML('afterend', assignmentHTML);
+}
+
+function updateGradingInfo(grading) {
+    const formulaSection = document.querySelector('.formula-section');
+    if (formulaSection) {
+        const componentsHTML = grading.components
+            .map(component => `
+                <div class="component-item">
+                    <strong>${component.name}</strong>: ${component.weight * 100}%
+                    ${component.calculation ? `<br>${component.calculation}` : ''}
+                </div>
+            `).join('');
+        
+        formulaSection.innerHTML = `
+            <h3>Grading Components</h3>
+            ${componentsHTML}
+            <h3>Eligibility Criteria</h3>
+            <ul>
+                ${grading.eligibility.map(criterion => `<li>${criterion}</li>`).join('')}
+            </ul>
+        `;
+    }
+}
+
+function initializeTimers(courseData) {
+    // Initialize timers for major assessments
+    if (courseData.majorAssessments) {
+        Object.entries(courseData.majorAssessments).forEach(([key, assessment]) => {
+            updateTimer(`${key}-timer`, assessment.date);
+        });
+    }
+    
+    // Initialize timers for assignments
+    if (courseData.weeklyAssignments) {
+        courseData.weeklyAssignments.forEach(assignment => {
+            updateTimer(`week${assignment.week}-timer`, assignment.date);
+        });
+    } else if (courseData.assignments) {
+        courseData.assignments.forEach(assignment => {
+            updateTimer(`${assignment.name.toLowerCase().replace(' ', '')}-timer`, assignment.deadline);
+        });
+    }
+}
+
+// Load course data when page loads
+document.addEventListener('DOMContentLoaded', loadCourseData);
+</script> 

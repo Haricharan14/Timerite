@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5FVJCBXE8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-F5FVJCBXE8');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Analytics - Deadlines</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="subject-styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header class="top-bar">
+        <img src="athman-logo.png" alt="timerite" class="logo">
+        <a href="index.html" class="about">Home</a>
+    </header>
+
+    <div class="container">
+        <h1>Business Analytics</h1>
+        
+        <div class="countdown-section">
+            <h2>Major Assessments</h2>
+            <!-- Dynamic content will be inserted here -->
+        </div>
+
+        <div class="countdown-section">
+            <h2>Course Assignments</h2>
+            <!-- Dynamic content will be inserted here -->
+        </div>
+
+        <div class="countdown-section">
+            <h2>Score Calculation</h2>
+            <div class="score-calculation-box">
+                <div class="formula-section" id="grading-formula">
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <div class="countdown-section">
+            <h2>Grade Calculator</h2>
+            <div class="calculator-container">
+                <div class="calculator-box">
+                    <form id="gradeCalculator">
+                        <div class="input-group">
+                            <label for="quiz1">Quiz 1 Score: </label>
+                            <input type="number" id="quiz1" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="quiz2">Quiz 2 Score: </label>
+                            <input type="number" id="quiz2" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="assignment1">Assignment 1 Score: </label>
+                            <input type="number" id="assignment1" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="assignment2">Assignment 2 Score: </label>
+                            <input type="number" id="assignment2" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="assignment3">Assignment 3 Score: </label>
+                            <input type="number" id="assignment3" min="0" max="100" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="final">Final Exam Score: </label>
+                            <input type="number" id="final" min="0" max="100" step="0.01" required>
+                        </div>
+                        <button type="button" onclick="calculateBAGrade()" style="background-color: #182f48; color: white; border: none; padding: 12px 15px; font-size: 1.1em; border-radius: 6px; cursor: pointer; width: 100%;">
+                            Calculate Grade
+                        </button>
+                    </form>
+                </div>
+                <div id="gradeResult" class="result-box">
+                    <p>Enter your scores and click Calculate Grade.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="countdown-section">
+            <div class="formula-section">
+            <h2>Eligibility Criteria</h2>
+                <ul>
+                    <!-- Dynamic content will be inserted here -->
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Import floating countdown -->
+    <iframe src="floating-countdown.html" style="border:none; width:100%; height:100vh; position:fixed; top:0; left:0; z-index:-1;"></iframe>
+
+    <footer class="copyright">
+        <p>&copy; 2024 Timerite. All rights reserved.</p>
+    </footer>
+
+    <script>
+    async function loadCourseData() {
+        try {
+            const response = await fetch('courses-data.json');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            console.log('Loaded course data:', data); // Debug log
+            const courseData = data['Business Analytics'];
+            if (!courseData) {
+                throw new Error('Business Analytics course data not found');
+            }
+            
+            // Update major assessments
+            updateMajorAssessments(courseData.majorAssessments);
+            
+            // Update assignments
+            updateCourseAssignments(courseData.assignments);
+            
+            // Update grading information
+            updateGradingInfo(courseData.grading);
+            
+            // Initialize timers
+            initializeTimers(courseData);
+        } catch (error) {
+            console.error('Error loading course data:', error.message);
+            // More specific error message
+            const errorMessage = error.message.includes('NetworkError') 
+                ? 'Could not find courses-data.json file. Please ensure it exists in the same directory as this page.'
+                : `Failed to load course data: ${error.message}`;
+            
+            document.querySelectorAll('.countdown-section').forEach(section => {
+                const heading = section.querySelector('h2');
+                if (heading) {
+                    heading.insertAdjacentHTML('afterend', 
+                        `<p class="error-message">${errorMessage}</p>`);
+                }
+            });
+        }
+    }
+
+    function updateMajorAssessments(assessments) {
+        const container = document.querySelector('.countdown-section');
+        const assessmentHTML = Object.entries(assessments)
+            .map(([key, assessment]) => `
+                <div class="deadline-info">${assessment.name}: ${assessment.description}</div>
+                <div id="${key}-timer" class="timer"></div>
+            `).join('');
+        container.querySelector('h2').insertAdjacentHTML('afterend', assessmentHTML);
+    }
+
+    function updateCourseAssignments(assignments) {
+        const container = document.querySelectorAll('.countdown-section')[1];
+        const assignmentHTML = assignments
+            .map(assignment => `
+                <div class="deadline-info">${assignment.name} (${assignment.marks} marks)</div>
+                <div class="countdown-group">
+                    <div class="countdown-item">
+                        <div class="countdown-label">Release:</div>
+                        <div>${new Date(assignment.release).toLocaleDateString('en-US', { 
+                            weekday: 'long', 
+                            year: 'numeric', 
+                            month: 'long', 
+                            day: 'numeric' 
+                        })}</div>
+                        <div id="${assignment.name.toLowerCase().replace(' ', '')}-release-timer" class="timer"></div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-label">Deadline:</div>
+                        <div>${new Date(assignment.deadline).toLocaleDateString('en-US', { 
+                            weekday: 'long', 
+                            year: 'numeric', 
+                            month: 'long', 
+                            day: 'numeric' 
+                        })}</div>
+                        <div id="${assignment.name.toLowerCase().replace(' ', '')}-deadline-timer" class="timer"></div>
+                    </div>
+                </div>
+            `).join('');
+        container.querySelector('h2').insertAdjacentHTML('afterend', assignmentHTML);
+    }
+
+    function updateGradingInfo(grading) {
+        const formulaSection = document.getElementById('grading-formula');
+        const componentsHTML = grading.components
+            .map(component => `
+                <div class="component-item">
+                    <strong>${component.name} (${component.weight * 100}%)</strong>
+                    <div class="formula-note latex-formula">${component.calculation}</div>
+                </div>
+            `).join('');
+        
+        formulaSection.innerHTML = `
+            <h3>Grading Components</h3>
+            ${componentsHTML}
+            <div class="total-formula" style="color: #182f48;">
+                <h3>Total Score Formula</h3>
+                <div class="latex-formula">
+                    \\[ \\text{Total} = \\underbrace{0.2 \\times QZ}_{\\text{20% Quiz}} + 
+                    \\underbrace{0.4 \\times AS}_{\\text{40% Assignments}} + 
+                    \\underbrace{0.4 \\times F}_{\\text{40% Final}} \\]
+                </div>
+            </div>
+        `;
+        
+        // Trigger MathJax to process the new content
+        if (window.MathJax) {
+            window.MathJax.typeset();
+        }
+        
+        // Update eligibility section
+        const eligibilitySection = document.querySelector('.countdown-section:last-child .formula-section ul');
+        eligibilitySection.innerHTML = grading.eligibility
+            .map(criterion => `<li>${criterion}</li>`)
+            .join('');
+    }
+
+    function initializeTimers(courseData) {
+        // Initialize major assessment timers
+        Object.entries(courseData.majorAssessments).forEach(([key, assessment]) => {
+            updateTimer(`${key}-timer`, assessment.date);
+        });
+        
+        // Initialize assignment timers for both release and deadline
+        courseData.assignments.forEach(assignment => {
+            const baseId = assignment.name.toLowerCase().replace(' ', '');
+            updateTimer(
+                `${baseId}-release-timer`, 
+                assignment.release,
+                'Opens in'
+            );
+            updateTimer(
+                `${baseId}-deadline-timer`, 
+                assignment.deadline,
+                'Due in'
+            );
+        });
+    }
+
+    function updateTimer(elementId, date, prefix = '') {
+        const element = document.getElementById(elementId);
+        
+        function update() {
+            const now = new Date().getTime();
+            const target = new Date(date).getTime();
+            const difference = target - now;
+
+            if (difference < 0) {
+                element.innerHTML = prefix ? "OPENED" : "DEADLINE PASSED";
+                element.classList.add(prefix ? 'opened' : 'passed');
+                return;
+            }
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            element.innerHTML = `${prefix ? prefix + ' ' : ''}${days}d ${hours}h ${minutes}m ${seconds}s${prefix ? '' : ' remaining'}`;
+        }
+
+        update();
+        setInterval(update, 1000);
+    }
+
+    // Load course data when page loads
+    document.addEventListener('DOMContentLoaded', loadCourseData);
+
+        function calculateBAGrade() {
+            // Get input values
+            const quiz1 = parseFloat(document.getElementById('quiz1').value) || 0;
+            const quiz2 = parseFloat(document.getElementById('quiz2').value) || 0;
+            const assignment1 = parseFloat(document.getElementById('assignment1').value) || 0;
+            const assignment2 = parseFloat(document.getElementById('assignment2').value) || 0;
+            const assignment3 = parseFloat(document.getElementById('assignment3').value) || 0;
+            const final = Math.min(40, parseFloat(document.getElementById('final').value) || 0);
+
+            // Calculate quiz score
+            const quizScore = 0.7 * Math.max(quiz1, quiz2) + 0.3 * Math.min(quiz1, quiz2);
+            
+            // Calculate assignment score (best 2 out of 3)
+            const assignments = [assignment1, assignment2, assignment3].sort((a, b) => b - a);
+            const assignmentScore = assignments[0] + assignments[1];
+
+            // Calculate total score
+            const totalScore = quizScore + assignmentScore + final;
+
+            // Check eligibility criteria
+            const hasOneAssignment = assignment1 > 0 || assignment2 > 0;
+            const hasFinal = final >= 10;
+            const quizRequirementMet = (quiz1 >= 8 && quiz2 >= 5) || (quiz2 >= 8 && quiz1 >= 5);
+            const quizTotalMet = quizScore >= 7;
+
+            // Create eligibility messages
+            const assignmentMessage = hasOneAssignment ?
+                "<span style='color: green;'>✅ At least one assignment submitted</span>" :
+                "<span style='color: red;'>❌ No assignments submitted (required)</span>";
+
+            const quizMessage = quizRequirementMet && quizTotalMet ?
+                "<span style='color: green;'>✅ Quiz requirements met</span>" :
+                "<span style='color: red;'>❌ Quiz requirements not met</span>";
+
+            const finalMessage = hasFinal ?
+                "<span style='color: green;'>✅ End term requirement met (≥10/40)</span>" :
+                "<span style='color: red;'>❌ End term requirement not met (<10/40)</span>";
+
+            // Display results
+            const resultBox = document.getElementById('gradeResult');
+            resultBox.innerHTML = `
+                <div style="border-bottom: 2px solid #ddd; margin-bottom: 15px; padding-bottom: 10px;">
+                    <strong>Eligibility Status:</strong>
+                    <ul>
+                        <li>${assignmentMessage}</li>
+                        <li>${quizMessage}</li>
+                        <li>${finalMessage}</li>
+                    </ul>
+                </div>
+                <ul>
+                    <li>Quiz Score (20 marks): ${quizScore.toFixed(2)}</li>
+                    <li>Assignment Score (40 marks): ${assignmentScore.toFixed(2)}</li>
+                    <li>Final Exam Score (40 marks): ${final.toFixed(2)}</li>
+                    <li><strong>Total Score: ${totalScore.toFixed(2)}/100</strong></li>
+                <li><strong>Grade: ${window.gradeCalculator.determineGrade(totalScore)}</strong></li>
+                </ul>
+            `;
+        }
+    </script>
+
+    <!-- Keep existing styles -->
+    <style>
+        .deadline-info {
+            font-size: 1.1em;
+            margin: 15px 0 5px 0;
+            color: #333;
+        }
+
+        .timer {
+            color: #182f48;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .timer.passed {
+            color: #dc3545;
+        }
+
+        .component-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .formula-note {
+            margin-top: 5px;
+            color: #666;
+        }
+
+        .formula-section ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            line-height: 1.6;
+        }
+
+        .error-message {
+            color: #dc3545;
+                padding: 10px;
+            margin: 10px 0;
+            background: rgba(220, 53, 69, 0.1);
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .score-calculation-box {
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .formula-section h3 {
+            color: #182f48;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .formula-section li {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .latex-formula {
+            margin: 15px 0;
+            overflow-x: auto;
+            padding: 10px 0;
+        }
+
+        .total-formula {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .component-item .latex-formula {
+            margin: 10px 0;
+            padding: 5px 0;
+        }
+
+        .countdown-group {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            flex: 1;
+            min-width: 250px;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .countdown-label {
+            font-weight: bold;
+            color: #182f48;
+            margin-bottom: 5px;
+        }
+
+        .timer.opened {
+            color: #28a745;
+        }
+    </style>
+    
+    <script src="grade-calculator.js"></script>
+</body>
+</html>

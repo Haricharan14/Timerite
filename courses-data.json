@@ -1,0 +1,1913 @@
+{
+  "AI Search Methods for Problem Solving": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "quiz2": {
+        "name": "Quiz 2", 
+        "date": "2025-03-16T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "weeklyAssignments": [
+      {
+        "week": 1,
+        "release": "2025-01-10T00:00:00",
+        "deadline": "2025-01-26T23:59:59",
+        "description": "Sunday"
+      },
+      {
+        "week": 2,
+        "release": "2025-01-17T00:00:00",
+        "deadline": "2025-01-26T23:59:59",
+        "description": "Sunday"
+      },
+      {
+        "week": 3,
+        "release": "2025-01-24T00:00:00",
+        "deadline": "2025-02-02T23:59:59",
+        "description": "Sunday"
+      },
+      {
+        "week": 4,
+        "release": "2025-01-31T00:00:00",
+        "deadline": "2025-02-09T23:59:59",
+        "description": "Sunday"
+      },
+      {
+        "week": 5,
+        "release": "2025-02-07T00:00:00",
+        "deadline": "2025-02-16T23:59:59",
+        "description": "Sunday"
+      },
+      {
+        "week": 6,
+        "release": "2025-02-14T00:00:00",
+        "deadline": "2025-03-02T23:59:59",
+        "description": "Sunday"
+      },
+      {
+        "week": 7,
+        "release": "2025-02-21T00:00:00",
+        "deadline": "2025-03-02T23:59:59",
+        "description": "Sunday"
+      },
+      {
+        "week": 8,
+        "release": "2025-02-28T00:00:00",
+        "deadline": "2025-03-09T23:59:59",
+        "description": "Sunday"
+      },
+      {
+        "week": 9,
+        "release": "2025-03-07T00:00:00",
+        "deadline": "2025-03-18T23:59:59",
+        "description": "Tuesday"
+      },
+      {
+        "week": 10,
+        "release": "2025-03-14T00:00:00",
+        "deadline": "2025-03-30T23:59:59",
+        "description": "Sunday"
+      },
+      {
+        "week": 11,
+        "release": "2025-03-21T00:00:00",
+        "deadline": "2025-03-30T23:59:59",
+        "description": "Sunday"
+      },
+      {
+        "week": 12,
+        "release": "2025-03-21T00:00:00",
+        "deadline": "2025-04-06T23:59:59",
+        "description": "Sunday"
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Weekly Assignments",
+          "weight": 0.1,
+          "calculation": "GAA = Average of first 10 weekly assignments"
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.25
+        },
+        {
+          "name": "Quiz 2",
+          "weight": 0.25
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.4
+        },
+        {
+          "name": "Bonus",
+          "value": 5,
+          "condition": "if passed"
+        }
+      ],
+      "eligibility": [
+        "Average of best 5 out of first 7 weekly assessments scores ≥ 40/100 and attending at least one of the 2 quizzes in the centre.",
+        "Eligibility to get final course grade: Attending the End sem exam."
+      ]
+    },
+    "notices": [
+      {
+        "title": "Programming Assignment Notice",
+        "content": "Programming Assignment 1 will be released between Quiz 1 and Quiz 2. The exact dates will be announced in the forum. This assignment will be evaluated offline."
+      }
+    ]
+  },
+
+  "Business Analytics": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "quiz2": {
+        "name": "Quiz 2",
+        "date": "2025-03-16T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "assignments": [
+      {
+        "name": "Assignment 1",
+        "marks": 20,
+        "release": "2025-02-07T23:59:59",
+        "deadline": "2025-02-16T23:59:59",
+        "description": "First Assignment"
+      },
+      {
+        "name": "Assignment 2",
+        "marks": 20,
+        "release": "2025-02-14T23:59:59",
+        "deadline": "2025-03-02T23:59:59",
+        "description": "Second Assignment"
+      },
+      {
+        "name": "Assignment 3",
+        "marks": 20,
+        "release": "2025-03-07T23:59:59",
+        "deadline": "2025-03-18T23:59:59",
+        "description": "Third Assignment"
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Quiz Score",
+          "weight": 0.2,
+          "calculation": "\\[ QZ = 0.7 \\times \\max(\\text{Quiz1}, \\text{Quiz2}) + 0.3 \\times \\min(\\text{Quiz1}, \\text{Quiz2}) \\]"
+        },
+        {
+          "name": "Assignments",
+          "weight": 0.4,
+          "calculation": "\\[ AS = \\text{max}(A_1 + A_2, A_1 + A_3, A_2 + A_3) \\]"
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.4,
+          "calculation": "\\[ F = \\min(\\text{Final Score}, 40) \\]"
+        }
+      ],
+      "totalFormula": "\\[ T = \\underbrace{0.2 \\times \\text{QZ}}_{\\text{quiz}} + \\underbrace{0.4 \\times \\text{AS}}_{\\text{assignments}} + \\underbrace{0.4 \\times \\text{F}}_{\\text{final}} \\]",
+      "eligibility": [
+        "Must submit at least 1 of the first 2 assignments",
+        "Must attend the End Term exam",
+        "Must score ≥ 10/40 in End Term exam",
+        "Must achieve QZ ≥ 7/20 in quizzes"
+      ]
+    }
+  },
+
+  "Tools in Data Science": {
+    "majorAssessments": {
+      "roe1": {
+        "name": "Remote Online Exam (ROE1)",
+        "date": "2025-03-02T13:00:00",
+        "description": "Open internet, Objective assessments (45 mins)",
+        "duration": "45"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "projects": [
+      {
+        "name": "Project 1",
+        "submission": {
+          "weight": 0.8,
+          "deadline": "2025-02-16T23:59:59"
+        },
+        "peerReview": {
+          "weight": 0.2,
+          "deadline": "2025-02-23T23:59:59"
+        }
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Projects",
+          "weight": 0.4
+        },
+        {
+          "name": "ROE1",
+          "weight": 0.3
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.3
+        }
+      ],
+      "eligibility": [
+        "Must complete all project components",
+        "Must attend the end semester exam"
+      ]
+    }
+  },
+
+  "Programming Concepts using Java": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM",
+        "type": "Objective + subjective"
+      },
+      "quiz2": {
+        "name": "Quiz 2",
+        "date": "2025-03-16T14:00:00",
+        "description": "Sunday, 2:00 PM",
+        "type": "Objective + subjective"
+      },
+      "pe1": {
+        "name": "Online Proctored Exam 1",
+        "date": "2025-03-02T09:30:00",
+        "description": "Programming Questions (Weeks 1-6)",
+        "duration": "90"
+      },
+      "pe2": {
+        "name": "Online Proctored Exam 2",
+        "date": "2025-03-30T09:30:00",
+        "description": "Programming Questions (Weeks 1-9)",
+        "duration": "90"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM",
+        "type": "Objective"
+      }
+    },
+    "weeklyAssignments": [
+      {
+        "week": 1,
+        "date": "2025-01-26T23:59:59",
+        "description": "Sunday"
+      },
+      {
+        "week": 2,
+        "date": "2025-01-26T23:59:59",
+        "description": "Sunday"
+      },
+      {
+        "week": 3,
+        "date": "2025-02-02T23:59:59",
+        "description": "Sunday"
+      },
+      {
+        "week": 4,
+        "date": "2025-02-09T23:59:59",
+        "description": "Sunday"
+      },
+      {
+        "week": 5,
+        "date": "2025-02-16T23:59:59",
+        "description": "Sunday"
+      },
+      {
+        "week": 6,
+        "date": "2025-03-02T23:59:59",
+        "description": "Sunday"
+      },
+      {
+        "week": 7,
+        "date": "2025-03-02T23:59:59",
+        "description": "Sunday"
+      },
+      {
+        "week": 8,
+        "date": "2025-03-09T23:59:59",
+        "description": "Sunday"
+      },
+      {
+        "week": 9,
+        "date": "2025-03-18T23:59:59",
+        "description": "Tuesday"
+      },
+      {
+        "week": 10,
+        "date": "2025-03-30T23:59:59",
+        "description": "Sunday"
+      },
+      {
+        "week": 11,
+        "date": "2025-03-30T23:59:59",
+        "description": "Sunday"
+      },
+      {
+        "week": 12,
+        "date": "2025-04-06T23:59:59",
+        "description": "Sunday"
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Weekly Assignments",
+          "weight": 0.1
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.15
+        },
+        {
+          "name": "Quiz 2",
+          "weight": 0.15
+        },
+        {
+          "name": "PE1",
+          "weight": 0.15
+        },
+        {
+          "name": "PE2",
+          "weight": 0.15
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.3
+        }
+      ],
+      "eligibility": [
+        "Average of best 5 out of First 9 Graded assessments (objective) ≥ 40/100",
+        "Attendance in at least One Quiz",
+        "Must attend the End Term exam"
+      ]
+    }
+  },
+
+  "English 1": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "quiz2": {
+        "name": "Quiz 2",
+        "date": "2025-03-16T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "weeklyAssignments": [
+      {
+        "week": 1,
+        "date": "2025-01-22T23:59:59",
+        "description": "Tuesday"
+      },
+      {
+        "week": 2,
+        "date": "2025-01-29T23:59:59",
+        "description": "Tuesday"
+      },
+      {
+        "week": 3,
+        "date": "2025-02-05T23:59:59",
+        "description": "Tuesday"
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Weekly Assignments",
+          "weight": 0.1
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.25
+        },
+        {
+          "name": "Quiz 2",
+          "weight": 0.25
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.4
+        }
+      ],
+      "eligibility": [
+        "Average of best 5 out of first 7 weekly assessments scores ≥ 40/100 and attending at least one of the 2 quizzes in the centre.",
+        "Eligibility to get final course grade: Attending the End sem exam."
+      ]
+    }
+  },
+
+  "English 2": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "quiz2": {
+        "name": "Quiz 2",
+        "date": "2025-03-16T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "weeklyAssignments": [
+      {
+        "week": 1,
+        "date": "2025-01-22T23:59:59",
+        "description": "Tuesday"
+      },
+      {
+        "week": 2,
+        "date": "2025-01-29T23:59:59",
+        "description": "Tuesday"
+      },
+      {
+        "week": 3,
+        "date": "2025-02-05T23:59:59",
+        "description": "Tuesday"
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Weekly Assignments",
+          "weight": 0.1
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.25
+        },
+        {
+          "name": "Quiz 2",
+          "weight": 0.25
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.4
+        }
+      ],
+      "eligibility": [
+        "Average of best 5 out of first 7 weekly assessments scores ≥ 40/100 and attending at least one of the 2 quizzes in the centre.",
+        "Eligibility to get final course grade: Attending the End sem exam."
+      ]
+    }
+  },
+
+  "Mathematics for Data Science 1": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "quiz2": {
+        "name": "Quiz 2",
+        "date": "2025-03-16T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "weeklyAssignments": [
+      {
+        "week": 1,
+        "date": "2025-01-22T23:59:59",
+        "description": "Tuesday"
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Weekly Assignments",
+          "weight": 0.1
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.25
+        },
+        {
+          "name": "Quiz 2",
+          "weight": 0.25
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.4
+        }
+      ],
+      "eligibility": [
+        "Average of best 5 out of first 7 weekly assessments scores ≥ 40/100 and attending at least one of the 2 quizzes in the centre.",
+        "Eligibility to get final course grade: Attending the End sem exam."
+      ]
+    }
+  },
+
+  "Mathematics for Data Science 2": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "quiz2": {
+        "name": "Quiz 2",
+        "date": "2025-03-16T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "weeklyAssignments": [
+      {
+        "week": 1,
+        "date": "2025-01-22T23:59:59",
+        "description": "Tuesday"
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Weekly Assignments",
+          "weight": 0.1
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.25
+        },
+        {
+          "name": "Quiz 2",
+          "weight": 0.25
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.4
+        }
+      ],
+      "eligibility": [
+        "Average of best 5 out of first 7 weekly assessments scores ≥ 40/100 and attending at least one of the 2 quizzes in the centre.",
+        "Eligibility to get final course grade: Attending the End sem exam."
+      ]
+    }
+  },
+
+  "Statistics for Data Science 1": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "quiz2": {
+        "name": "Quiz 2",
+        "date": "2025-03-16T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "weeklyAssignments": [
+      {
+        "week": 1,
+        "date": "2025-01-22T23:59:59",
+        "description": "Tuesday"
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Weekly Assignments",
+          "weight": 0.1
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.25
+        },
+        {
+          "name": "Quiz 2",
+          "weight": 0.25
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.4
+        }
+      ],
+      "eligibility": [
+        "Average of best 5 out of first 7 weekly assessments scores ≥ 40/100 and attending at least one of the 2 quizzes in the centre.",
+        "Eligibility to get final course grade: Attending the End sem exam."
+      ]
+    }
+  },
+
+  "Statistics for Data Science 2": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "quiz2": {
+        "name": "Quiz 2",
+        "date": "2025-03-16T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "weeklyAssignments": [
+      {
+        "week": 1,
+        "date": "2025-01-22T23:59:59",
+        "description": "Tuesday"
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Weekly Assignments",
+          "weight": 0.1
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.25
+        },
+        {
+          "name": "Quiz 2",
+          "weight": 0.25
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.4
+        }
+      ],
+      "eligibility": [
+        "Average of best 5 out of first 7 weekly assessments scores ≥ 40/100 and attending at least one of the 2 quizzes in the centre.",
+        "Eligibility to get final course grade: Attending the End sem exam."
+      ]
+    }
+  },
+
+  "Introduction to Python Programming": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "pe1": {
+        "name": "OPPE 1",
+        "date": "2025-03-02T07:30:00",
+        "description": "Programming Questions (Weeks 1-6)",
+        "duration": "90"
+      },
+      "pe2": {
+        "name": "OPPE 2",
+        "date": "2025-03-30T07:30:00",
+        "description": "Programming Questions (Weeks 1-9)",
+        "duration": "90"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "weeklyAssignments": [
+      {
+        "week": 1,
+        "date": "2025-01-26T23:59:59",
+        "description": "Sunday"
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Weekly Assignments (GAA1)",
+          "weight": 0.05
+        },
+        {
+          "name": "Programming Assignments (GAA2)",
+          "weight": 0.05
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.2
+        },
+        {
+          "name": "OPPE 1",
+          "weight": 0.2
+        },
+        {
+          "name": "OPPE 2",
+          "weight": 0.2
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.3
+        }
+      ],
+      "eligibility": [
+        "Average of GAA1 and GAA2 ≥ 40/100",
+        "Must attend Quiz 1",
+        "Must attend at least one OPPE",
+        "Must attend End Term exam"
+      ]
+    }
+  },
+
+  "Programming Data Structures and Algorithms using Python": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "quiz2": {
+        "name": "Quiz 2",
+        "date": "2025-03-16T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "oppe": {
+        "name": "OPPE",
+        "date": "2025-03-30T07:30:00",
+        "description": "Programming Questions",
+        "duration": "90"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "weeklyAssignments": [
+      {
+        "week": 1,
+        "date": "2025-01-26T23:59:59",
+        "description": "Sunday"
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Weekly Assignments",
+          "weight": 0.1
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.2
+        },
+        {
+          "name": "Quiz 2",
+          "weight": 0.2
+        },
+        {
+          "name": "OPPE",
+          "weight": 0.2
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.3
+        }
+      ],
+      "eligibility": [
+        "Average of best 5 out of first 7 weekly assessments (objective and programming) ≥ 40/100",
+        "Attendance in at least one quiz",
+        "Must attend the end semester exam"
+      ]
+    }
+  },
+
+  "Machine Learning Foundations": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "quiz2": {
+        "name": "Quiz 2",
+        "date": "2025-03-16T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "weeklyAssignments": [
+      {
+        "week": 1,
+        "date": "2025-01-26T23:59:59",
+        "description": "Sunday"
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Weekly Assignments",
+          "weight": 0.1
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.25
+        },
+        {
+          "name": "Quiz 2",
+          "weight": 0.25
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.4
+        }
+      ],
+      "eligibility": [
+        "Average of best 5 out of first 7 weekly assessments scores ≥ 40/100",
+        "Attendance in at least one quiz",
+        "Must attend the end semester exam"
+      ]
+    }
+  },
+
+  "Machine Learning Practice": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "ope1": {
+        "name": "OPE 1",
+        "date": "2025-03-01T07:30:00",
+        "description": "Programming Exam",
+        "duration": "90"
+      },
+      "ope2": {
+        "name": "OPE 2",
+        "date": "2025-03-30T07:30:00",
+        "description": "Programming Exam",
+        "duration": "90"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "weeklyAssignments": [
+      {
+        "week": 1,
+        "date": "2025-01-26T23:59:59",
+        "description": "Sunday"
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Weekly Assignments",
+          "weight": 0.1
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.2
+        },
+        {
+          "name": "OPE 1",
+          "weight": 0.2
+        },
+        {
+          "name": "OPE 2",
+          "weight": 0.2
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.3
+        }
+      ],
+      "eligibility": [
+        "Average of best 5 out of first 7 weekly assessments scores ≥ 40/100",
+        "Must attend Quiz 1",
+        "Must attend at least one OPE",
+        "Must attend the end semester exam"
+      ]
+    }
+  },
+
+  "Application Development - 1": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "quiz2": {
+        "name": "Quiz 2",
+        "date": "2025-03-16T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "weeklyAssignments": [
+      {
+        "week": 1,
+        "date": "2025-01-26T23:59:59",
+        "description": "Sunday"
+      },
+      {
+        "week": 2,
+        "date": "2025-01-26T23:59:59",
+        "description": "Sunday"
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Weekly Assignments (GAA1)",
+          "weight": 0.05
+        },
+        {
+          "name": "Programming Assignments (GAA2)",
+          "weight": 0.05
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.25
+        },
+        {
+          "name": "Quiz 2",
+          "weight": 0.25
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.4
+        }
+      ],
+      "eligibility": [
+        "Average of GAA1 and GAA2 ≥ 40/100",
+        "Attendance in at least one quiz",
+        "Must attend the end semester exam"
+      ]
+    }
+  },
+
+  "Application Development - 2": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "quiz2": {
+        "name": "Quiz 2",
+        "date": "2025-03-16T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "weeklyAssignments": [
+      {
+        "week": 1,
+        "date": "2025-01-26T23:59:59",
+        "description": "Sunday"
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Weekly Assignments (GAA1)",
+          "weight": 0.05
+        },
+        {
+          "name": "Programming Assignments (GAA2)",
+          "weight": 0.05
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.25
+        },
+        {
+          "name": "Quiz 2",
+          "weight": 0.25
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.4
+        }
+      ],
+      "eligibility": [
+        "Average of GAA1 and GAA2 ≥ 40/100",
+        "Attendance in at least one quiz",
+        "Must attend the end semester exam"
+      ]
+    }
+  },
+
+  "Database Management System (DBMS)": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "quiz2": {
+        "name": "Quiz 2",
+        "date": "2025-03-16T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "weeklyAssignments": [
+      {
+        "week": 1,
+        "date": "2025-01-26T23:59:59",
+        "description": "Sunday"
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Weekly Assignments",
+          "weight": 0.1
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.25
+        },
+        {
+          "name": "Quiz 2",
+          "weight": 0.25
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.4
+        }
+      ],
+      "eligibility": [
+        "Average of best 5 out of first 7 weekly assessments scores ≥ 40/100",
+        "Attendance in at least one quiz",
+        "Must attend the end semester exam"
+      ]
+    }
+  },
+
+  "Business Data Management": {
+    "majorAssessments": {
+      "quiz2": {
+        "name": "Quiz 2",
+        "date": "2025-03-16T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "roe": {
+        "name": "Remote Online Exam (ROE)",
+        "description": "Date to be announced",
+        "type": "Online"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "weeklyAssignments": [
+      {
+        "week": 1,
+        "date": "2025-01-26T23:59:59",
+        "description": "Sunday"
+      }
+    ],
+    "notices": [
+      {
+        "title": "Important Note",
+        "content": "There will be NO Quiz 1 for BDM."
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Weekly Assignments",
+          "weight": 0.1
+        },
+        {
+          "name": "Quiz 2",
+          "weight": 0.3
+        },
+        {
+          "name": "ROE",
+          "weight": 0.2
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.4
+        }
+      ],
+      "eligibility": [
+        "Average of best 5 out of first 7 weekly assessments scores ≥ 40/100",
+        "Must attend Quiz 2",
+        "Must attend the end semester exam"
+      ]
+    }
+  },
+
+  "Deep Learning": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "quiz2": {
+        "name": "Quiz 2",
+        "date": "2025-03-16T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "weeklyAssignments": [
+      {
+        "week": 1,
+        "date": "2025-01-26T23:59:59",
+        "description": "Sunday"
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Weekly Assignments",
+          "weight": 0.1
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.25
+        },
+        {
+          "name": "Quiz 2",
+          "weight": 0.25
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.4
+        }
+      ],
+      "eligibility": [
+        "Average of best 5 out of first 7 weekly assessments scores ≥ 40/100",
+        "Attendance in at least one quiz",
+        "Must attend the end semester exam"
+      ]
+    }
+  },
+
+  "Deep Learning Practice": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "quiz2": {
+        "name": "Quiz 2",
+        "date": "2025-03-16T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "quiz3": {
+        "name": "Quiz 3",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "weeklyAssignments": [
+      {
+        "week": 1,
+        "date": "2025-01-26T23:59:59",
+        "description": "Sunday"
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Weekly Assignments",
+          "weight": 0.1
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.3
+        },
+        {
+          "name": "Quiz 2",
+          "weight": 0.3
+        },
+        {
+          "name": "Quiz 3",
+          "weight": 0.3
+        }
+      ],
+      "eligibility": [
+        "Average of best 5 out of first 7 weekly assessments scores ≥ 40/100",
+        "Must attend at least two quizzes"
+      ]
+    }
+  },
+
+  "Data Visualization": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "quiz2": {
+        "name": "Quiz 2",
+        "date": "2025-03-16T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "endterm": {
+        "name": "End Term",
+        "description": "Project based with presentation and viva",
+        "type": "Project"
+      }
+    },
+    "assignments": [
+      {
+        "name": "Graded Assignment 1",
+        "deadline": "2025-02-16T23:59:59"
+      },
+      {
+        "name": "Graded Assignment 2",
+        "deadline": "2025-03-02T23:59:59"
+      },
+      {
+        "name": "Graded Assignment 3",
+        "deadline": "2025-03-16T23:59:59"
+      },
+      {
+        "name": "Graded Assignment 4",
+        "deadline": "2025-03-30T23:59:59"
+      },
+      {
+        "name": "Graded Assignment 5",
+        "deadline": "2025-04-06T23:59:59"
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Assignments",
+          "weight": 0.3
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.2
+        },
+        {
+          "name": "Quiz 2",
+          "weight": 0.2
+        },
+        {
+          "name": "Project",
+          "weight": 0.3
+        }
+      ],
+      "eligibility": [
+        "Average of the best 3 out of the 5 graded assignment scores >= 40/100",
+        "Attending at least one of the 2 quizzes in the centre",
+        "Completing & presenting the Group Project (P) with scoring more than 50/100 in it"
+      ]
+    }
+  },
+
+  "Industry 4.0": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "quiz2": {
+        "name": "Quiz 2",
+        "date": "2025-03-16T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "assignments": [
+      {
+        "name": "Assignment 1",
+        "release": "2025-02-07T00:00:00",
+        "deadline": "2025-02-16T23:59:59"
+      },
+      {
+        "name": "Assignment 2",
+        "release": "2025-02-14T00:00:00",
+        "deadline": "2025-03-02T23:59:59"
+      },
+      {
+        "name": "Assignment 3",
+        "release": "2025-03-07T00:00:00",
+        "deadline": "2025-03-18T23:59:59"
+      }
+    ],
+    "project": {
+      "teamSize": 5,
+      "deadlines": {
+        "teamFormation": "Week 2 end",
+        "projectSummary": "Week 8 end"
+      },
+      "guidelines": [
+        "Teams of 5 members",
+        "Teams need to be formed and informed to us by the end of Week 2",
+        "2 paged project summary needs to submitted by the end of Week 8",
+        "The concepts to be applied must strictly align with the topics covered in the BA and Industry 4.0 courses"
+      ]
+    },
+    "grading": {
+      "components": [
+        {
+          "name": "Assignments",
+          "weight": 0.3
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.2
+        },
+        {
+          "name": "Quiz 2",
+          "weight": 0.2
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.3
+        }
+      ],
+      "eligibility": [
+        "Must complete all assignments",
+        "Attendance in at least one quiz",
+        "Must attend the end semester exam",
+        "Must complete project requirements"
+      ]
+    }
+  },
+
+  "Operating Systems": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "quiz2": {
+        "name": "Quiz 2",
+        "date": "2025-03-16T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "weeklyAssignments": [
+      {
+        "week": 1,
+        "date": "2025-01-26T23:59:59",
+        "description": "Sunday"
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Weekly Assignments",
+          "weight": 0.1
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.25
+        },
+        {
+          "name": "Quiz 2",
+          "weight": 0.25
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.4
+        }
+      ],
+      "eligibility": [
+        "Average of best 5 out of first 7 weekly assessments scores ≥ 40/100",
+        "Attendance in at least one quiz",
+        "Must attend the end semester exam"
+      ]
+    }
+  },
+
+  "System Commands": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "oppe": {
+        "name": "OPPE",
+        "date": "2025-03-29T07:30:00",
+        "description": "Saturday, 7:30 AM"
+      },
+      "reoppe": {
+        "name": "ReOPPE",
+        "date": "2025-04-05T07:30:00",
+        "description": "Saturday, 7:30 AM"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "bpt": {
+      "tests": [
+        {
+          "name": "BPT 1",
+          "release": "Week 2"
+        }
+      ]
+    },
+    "grading": {
+      "components": [
+        {
+          "name": "BPTs",
+          "weight": 0.2
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.2
+        },
+        {
+          "name": "OPPE",
+          "weight": 0.2
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.4
+        }
+      ],
+      "eligibility": [
+        "Must complete required BPTs",
+        "Must attend Quiz 1",
+        "Must attend OPPE or ReOPPE",
+        "Must attend the end semester exam"
+      ]
+    }
+  },
+
+  "Programming in C": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "oppe1": {
+        "name": "OPPE 1",
+        "date": "2025-03-01T07:30:00",
+        "description": "Saturday, 7:30 AM"
+      },
+      "oppe2": {
+        "name": "OPPE 2",
+        "date": "2025-03-30T07:30:00",
+        "description": "Sunday, 7:30 AM"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "weeklyAssignments": [
+      {
+        "week": 1,
+        "date": "2025-01-26T23:59:59",
+        "description": "Sunday"
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Weekly Assignments",
+          "weight": 0.1
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.2
+        },
+        {
+          "name": "OPPE 1",
+          "weight": 0.2
+        },
+        {
+          "name": "OPPE 2",
+          "weight": 0.2
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.3
+        }
+      ],
+      "eligibility": [
+        "Average of best 5 out of first 7 weekly assessments scores ≥ 40/100",
+        "Must attend Quiz 1",
+        "Must attend at least one OPPE",
+        "Must attend the end semester exam"
+      ]
+    }
+  },
+
+  "Strategies for Professional Growth": {
+    "majorAssessments": {
+      "quiz2": {
+        "name": "Quiz 2",
+        "date": "2025-03-16T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "notices": [
+      {
+        "title": "Important Note",
+        "content": "There is NO Quiz 1 for this subject"
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Quiz 2",
+          "weight": 0.4
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.6
+        }
+      ],
+      "eligibility": [
+        "Must attend Quiz 2",
+        "Must attend the end semester exam"
+      ]
+    }
+  },
+
+  "Corporate Finance": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "quiz2": {
+        "name": "Quiz 2",
+        "date": "2025-03-16T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "weeklyAssignments": [
+      {
+        "week": 1,
+        "date": "2025-01-26T23:59:59",
+        "description": "Sunday"
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Weekly Assignments",
+          "weight": 0.1
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.25
+        },
+        {
+          "name": "Quiz 2",
+          "weight": 0.25
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.4
+        }
+      ],
+      "eligibility": [
+        "Average of best 5 out of first 7 weekly assessments scores ≥ 40/100",
+        "Attendance in at least one quiz",
+        "Must attend the end semester exam"
+      ]
+    }
+  },
+
+  "Financial Forensics": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "quiz2": {
+        "name": "Quiz 2",
+        "date": "2025-03-16T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "assignments": [
+      {
+        "name": "Case Study 1",
+        "deadline": "2025-02-16T23:59:59"
+      },
+      {
+        "name": "Case Study 2",
+        "deadline": "2025-03-09T23:59:59"
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Case Studies",
+          "weight": 0.2
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.2
+        },
+        {
+          "name": "Quiz 2",
+          "weight": 0.2
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.4
+        }
+      ],
+      "eligibility": [
+        "Must complete all case studies",
+        "Attendance in at least one quiz",
+        "Must attend the end semester exam"
+      ]
+    }
+  },
+
+  "Big Data & Biological Networks": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "quiz2": {
+        "name": "Quiz 2",
+        "date": "2025-03-16T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "weeklyAssignments": [
+      {
+        "week": 1,
+        "date": "2025-01-26T23:59:59",
+        "description": "Sunday"
+      }
+    ],
+    "project": {
+      "name": "Network Analysis Project",
+      "deadline": "2025-03-30T23:59:59",
+      "weight": 0.2
+    },
+    "grading": {
+      "components": [
+        {
+          "name": "Weekly Assignments",
+          "weight": 0.1
+        },
+        {
+          "name": "Project",
+          "weight": 0.2
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.2
+        },
+        {
+          "name": "Quiz 2",
+          "weight": 0.2
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.3
+        }
+      ],
+      "eligibility": [
+        "Average of best 5 out of first 7 weekly assessments scores ≥ 40/100",
+        "Must complete project",
+        "Attendance in at least one quiz",
+        "Must attend the end semester exam"
+      ]
+    }
+  },
+
+  "Introduction to Natural Language Processing": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "quiz2": {
+        "name": "Quiz 2",
+        "date": "2025-03-16T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "weeklyAssignments": [
+      {
+        "week": 1,
+        "date": "2025-01-26T23:59:59",
+        "description": "Sunday"
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Weekly Assignments",
+          "weight": 0.1
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.25
+        },
+        {
+          "name": "Quiz 2",
+          "weight": 0.25
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.4
+        }
+      ],
+      "eligibility": [
+        "Average of best 5 out of first 7 weekly assessments scores ≥ 40/100",
+        "Attendance in at least one quiz",
+        "Must attend the end semester exam"
+      ]
+    }
+  },
+
+  "Special Topics in ML": {
+    "majorAssessments": {
+      "quiz1": {
+        "name": "Quiz 1",
+        "date": "2025-02-23T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "quiz2": {
+        "name": "Quiz 2",
+        "date": "2025-03-16T14:00:00",
+        "description": "Sunday, 2:00 PM"
+      },
+      "endterm": {
+        "name": "End Term",
+        "date": "2025-04-13T09:00:00",
+        "description": "Sunday, 9:00 AM"
+      }
+    },
+    "weeklyAssignments": [
+      {
+        "week": 1,
+        "date": "2025-01-26T23:59:59",
+        "description": "Sunday"
+      }
+    ],
+    "notices": [
+      {
+        "title": "Course Focus",
+        "content": "This course focuses on Reinforcement Learning"
+      }
+    ],
+    "grading": {
+      "components": [
+        {
+          "name": "Weekly Assignments",
+          "weight": 0.1
+        },
+        {
+          "name": "Quiz 1",
+          "weight": 0.25
+        },
+        {
+          "name": "Quiz 2",
+          "weight": 0.25
+        },
+        {
+          "name": "Final Exam",
+          "weight": 0.4
+        }
+      ],
+      "eligibility": [
+        "Average of best 5 out of first 7 weekly assessments scores ≥ 40/100",
+        "Attendance in at least one quiz",
+        "Must attend the end semester exam"
+      ]
+    }
+  }
+} 
